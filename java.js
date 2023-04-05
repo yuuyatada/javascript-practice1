@@ -62,25 +62,47 @@
  
  //文字列をURLエスケープする場合
  
- document.querySelector('#tweetButton').addEventListener('click',
- () => {
+ //document.querySelector('#tweetButton').addEventListener('click',
+ //() => {
      //ツイート内容を取得
-     let tweetText = document.querySelector('tweetTextArea').value;
+     //let tweetText = document.querySelector('tweetTextArea').value;
      
      //半角スペースと#javascriptをツイート文言に追加する
-     tweetText += ' #JavaScript';
+     //tweetText += ' #JavaScript';
      
      //エンコードする
-     const encodedText = encodeURIComponent(tweetText);
+     //const encodedText = encodeURIComponent(tweetText);
      
      //ツイート用リンクを作成する
-     const tweetURL =
-     'https://twitter.com/intent/tweet?text=${encodedText}';
+     //const tweetURL =
+     //'https://twitter.com/intent/tweet?text=${encodedText}';
      
      //ツイート用リンクを開く
-     window.open(tweetURL);
+     //window.open(tweetURL);
      
- });
+ //});
+ 
+ //API等から出力するユーザーデータの配列
+ const userList = [
+     {id: 1,name: '田中',address:'田中'},
+     {id: 2,name: '鈴木',address:'宮城'},
+     {id: 3,name: '高橋',address:'福岡'}
+     ];
+     
+     //コンテナー
+     
+     const container = document.querySelector('.container');
+     
+     //userListの配列の各要素についてのループ
+     userList.forEach((userDate) => {
+         //各要素を書き足す
+         container.innerHTML += `
+         <div class="card">
+         <h2>${userDate.name}</h2>
+         <p>出身地:${userDate.address}</p>
+         </div>
+         `;
+     });
  
 
 
