@@ -26,39 +26,61 @@
 
 //文字列を指定の長さにする
 //時間
-const hourElement = document.querySelector('.hour');
+//const hourElement = document.querySelector('.hour');
 //分
-const minuteElement = document.querySelector('.minute');
+//const minuteElement = document.querySelector('.minute');
 //秒
-const secondElement = document.querySelector('.second');
+//const secondElement = document.querySelector('.second');
 
-update();
+//update();
 
 //現在時間を表示する処理
-function update(){
-    const currentTime = new Date();
+//function update(){
+    //const currentTime = new Date();
     
 //秒の表示
-const second = currentTime.getSeconds();
-secondElement.innerText = addZeroPadding(second);
+//const second = currentTime.getSeconds();
+//secondElement.innerText = addZeroPadding(second);
 
-const minute = currentTime.getMinutes();
-minuteElement.innerText = addZeroPadding(minute);
+//const minute = currentTime.getMinutes();
+//minuteElement.innerText = addZeroPadding(minute);
 
-const hour = currentTime.getHours();
-hourElement.innerText = addZeroPadding(hour);
+//const hour = currentTime.getHours();
+//hourElement.innerText = addZeroPadding(hour);
 
 //次のフレームで再度update()を実行する
-requestAnimationFrame(update);
-}
+//requestAnimationFrame(update);
+//}
 
 /**
  *@parm num
  * @returns {string}
  */
- function addZeroPadding(num) {
-     return String(num).padStart(2, '0');
- }
+ //function addZeroPadding(num) {
+     //return String(num).padStart(2, '0');
+ //}
+ 
+ //文字列をURLエスケープする場合
+ 
+ document.querySelector('#tweetButton').addEventListener('click',
+ () => {
+     //ツイート内容を取得
+     let tweetText = document.querySelector('tweetTextArea').value;
+     
+     //半角スペースと#javascriptをツイート文言に追加する
+     tweetText += ' #JavaScript';
+     
+     //エンコードする
+     const encodedText = encodeURIComponent(tweetText);
+     
+     //ツイート用リンクを作成する
+     const tweetURL =
+     'https://twitter.com/intent/tweet?text=${encodedText}';
+     
+     //ツイート用リンクを開く
+     window.open(tweetURL);
+     
+ });
  
 
 
