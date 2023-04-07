@@ -107,40 +107,90 @@
      
      
      //idキーとnameキーを持つユーザーデータの配列
-     const userDataList = [
-         {id :123 , name: '高橋'},
-         {id :1021 , name: '鈴木'},
-         {id :6021 , name: '後藤'}
-         ];
+     //const userDataList = [
+         //{id :123 , name: '高橋'},
+         //{id :1021 , name: '鈴木'},
+         //{id :6021 , name: '後藤'}
+         //];
          
       //**検索IDを入力するinput要素
-     const searchIdInput = document.querySelector('#search-id-input');
+     //const searchIdInput = document.querySelector('#search-id-input');
      
      //** 検索結果を表示する要素
-     const searchResult = document.querySelector('#search-result');
+     //const searchResult = document.querySelector('#search-result');
      
      //文字が入力されるたびにチェックを行う
-     searchIdInput.addEventListener('keyup',() => {
+     //searchIdInput.addEventListener('keyup',() => {
          //検索IDを取得する
-         const searchId = Number(event.target.value);
-         findUser(searchId);
-     });
+         //const searchId = Number(event.target.value);
+        // findUser(searchId);
+     //});
      
      //*ユーザーを検索する
-     function findUser(searchId) {
+     //function findUser(searchId) {
          //該当データを取得する
-         const targetData =userDataList.find((data) =>
-         data.id === searchId);
+        // const targetData =userDataList.find((data) =>
+         //data.id === searchId);
      
      //該当データが存在しなかったら「該当者なし」と表示して終了
-     if (targetData == null){
-         searchResult.textContent = '該当者なし';
-         return;
-     }
+     //if (targetData == null){
+        // searchResult.textContent = '該当者なし';
+        // return;
+    // }
      
      //該当データの名前を表示する
-     searchResult.textContent = targetData.name;
-     }
+     //searchResult.textContent = targetData.name;
+    // }
+    
+    
+    //データ
+    const userDataList = [
+        {id:2 , name:'鈴木'},
+        {id:10 , name:'田中'},
+        {id:4 , name:'佐藤'},
+        {id:29 , name:'鈴木'},
+        {id:101 , name:'小笠原'}
+        ];
+        
+        //表示を更新する
+        function updataList(){
+            let listHtml = '';
+            
+            for(const data of userDataList){
+            listHtml += `<li>${data.id} : ${data.name}</li>`;
+            }
+            document.querySelector('.user_list').innerHTML = listHtml;
+        }
+         //昇順にソート
+        function sortByAscending(){
+            userDataList.sort((a,b) => {
+                return a.id -b.id;
+            });
+        updataList();
+        }
+        
+        
+        //降順にソート
+        function sortByDescending(){
+            userDataList.sort((a,b) => {
+                return b.id -a.id;
+            });
+        updataList();
+        }
+        
+        //昇順ボタンをクリックしたときの処理
+        document.querySelector('.ascending').addEventListener('click',() => {
+        sortByAscending();
+        });
+        
+        //降順ボタンをクリックしたときの処理
+        document.querySelector('.descending').addEventListener('click', () =>
+        {
+            sortByDescending();
+        });
+        
+        //最初に昇順にならべる
+        sortByAscending();
          
  
 
