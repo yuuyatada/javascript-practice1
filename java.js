@@ -144,54 +144,100 @@
     
     
     //データ
-    const userDataList = [
-        {id:2 , name:'鈴木'},
-        {id:10 , name:'田中'},
-        {id:4 , name:'佐藤'},
-        {id:29 , name:'鈴木'},
-        {id:101 , name:'小笠原'}
-        ];
+    //const userDataList = [
+        //{id:2 , name:'鈴木'},
+        //{id:10 , name:'田中'},
+        //{id:4 , name:'佐藤'},
+        //{id:29 , name:'鈴木'},
+        //{id:101 , name:'小笠原'}
+       // ];
         
         //表示を更新する
-        function updataList(){
-            let listHtml = '';
+        //function updataList(){
+            //let listHtml = '';
             
-            for(const data of userDataList){
-            listHtml += `<li>${data.id} : ${data.name}</li>`;
-            }
-            document.querySelector('.user_list').innerHTML = listHtml;
-        }
+            //for(const data of userDataList){
+            //listHtml += `<li>${data.id} : ${data.name}</li>`;
+            //}
+            //document.querySelector('.user_list').innerHTML = listHtml;
+        //}
          //昇順にソート
-        function sortByAscending(){
-            userDataList.sort((a,b) => {
-                return a.id -b.id;
-            });
-        updataList();
-        }
+        //function sortByAscending(){
+            //userDataList.sort((a,b) => {
+                //return a.id -b.id;
+            //});
+       // updataList();
+        //}
         
         
         //降順にソート
-        function sortByDescending(){
-            userDataList.sort((a,b) => {
-                return b.id -a.id;
-            });
-        updataList();
-        }
+        //function sortByDescending(){
+           // userDataList.sort((a,b) => {
+              //  return b.id -a.id;
+           // });
+       // updataList();
+       // }
         
         //昇順ボタンをクリックしたときの処理
-        document.querySelector('.ascending').addEventListener('click',() => {
-        sortByAscending();
-        });
+        //document.querySelector('.ascending').addEventListener('click',() => {
+        //sortByAscending();
+       // });
         
         //降順ボタンをクリックしたときの処理
-        document.querySelector('.descending').addEventListener('click', () =>
-        {
-            sortByDescending();
-        });
+       // document.querySelector('.descending').addEventListener('click', () =>
+        //{
+        //    sortByDescending();
+       // });
         
         //最初に昇順にならべる
-        sortByAscending();
+        //sortByAscending();
          
+         //ある配列から条件を満たす別の配列を作る
+         const userDataList = [
+             { name:'鈴木', age:18},
+             { name:'田中', age:27},
+             { name:'佐藤', age:32},
+             { name:'高橋', age:41},
+             { name:'小笠原', age:56}
+             ];
+             
+             //button要素のイベント設定
+            document.querySelectorAll('.button').forEach((element) => {
+            element.addEventListener('click', (event) => {
+                onClickButton(event);
+            });
+          });
+          
+          /**
+           * ボタンがクリックされたときの処理
+           */
+           
+           function onClickButton(event) {
+               //クリックされたボタン要素
+               const button = event.target;
+               //ボタン要素からdata-ageを取得
+               const targetAge = button.dataset.age;
+               // targetAge以上のユーザー配列を生成する
+               const filterdList = userDataList.filter((data) => data.age >=
+               targetAge);
+               //配列を出力する
+               updateList(filterdList);
+           }
+           /**
+            * ユーザー配列を出力する
+            */
+            function updateList(filterdList){
+                let listHtml = '';
+                
+                for (const data of filterdList){
+                    listHtml += `<li>${data.name} : ${data.age}歳</li>`;
+                }
+                document.querySelector('.user_list').innerHTML = listHtml;
+            }
+            
+               
+               
+           
  
 
 
