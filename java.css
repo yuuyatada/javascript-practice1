@@ -53,3 +53,8 @@
     transform-origin:bottom;
 }
 */
+.character{
+    width:150px;
+    height:150px;
+    background:red;
+}

@@ -273,23 +273,40 @@
                //});
                
                //操作対象エリア
-               const logArea = document.querySelector('#log2');
+               //const logArea = document.querySelector('#log2');
                
                //対象エリア内でマウスボタンを押すとログを出力
-               logArea.addEventListener('mousedown', () => {
-                logArea.innerHTML = `マウスボタンを押した`;
-               });
+               //logArea.addEventListener('mousedown', () => {
+               // logArea.innerHTML = `マウスボタンを押した`;
+               //});
                
                //対象エリア上でマウスボタンを離したらログを出力
-               logArea.addEventListener('mouseup', () => {
-                logArea.innerHTML = `マウスボタンを離した`
-               });
+               //logArea.addEventListener('mouseup', () => {
+               // logArea.innerHTML = `マウスボタンを離した`
+              // });
                
                 //対象エリア上でマウスボタンを移動したら出力
-               logArea.addEventListener('mousemove', () => {
-                logArea.innerHTML = `マウス移動した`
+               //logArea.addEventListener('mousemove', () => {
+              //  logArea.innerHTML = `マウス移動した`
+               //});
+               
+               /*動かすキャラ*/
+               const character = document.querySelector('.character');
+               //ページ上でマウスボタンを押したら移動開始
+               document.addEventListener('mousedown',() => {
+                //マウスの動きでキャラを動かす
+                document.addEventListener('mousemove', onMouseMove);
+                //ページ上でマウスボタンを離したらキャラの移動を終了
+                document.addEventListener('mouseup', () => {
+                 document.removeEventListener('mousemove',onMouseMove);
+                });
                });
                
+               //マウスが動いた際の処理
+               function onMouseMove(event){
+                character.style.left = `${event.clientX - 100}px`;
+                character.style.top = `${event.clientY - 100}px`;
+               }
            
  
 
