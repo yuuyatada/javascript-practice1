@@ -268,8 +268,26 @@
                 //console.log('クリックされました');
                //}
                
-               document.querySelector('.button').addEventListener('click', () => {
-                alert('ボタンがクリックされました');
+               //document.querySelector('.button').addEventListener('click', () => {
+                //alert('ボタンがクリックされました');
+               //});
+               
+               //操作対象エリア
+               const logArea = document.querySelector('#log2');
+               
+               //対象エリア内でマウスボタンを押すとログを出力
+               logArea.addEventListener('mousedown', () => {
+                logArea.innerHTML = `マウスボタンを押した`;
+               });
+               
+               //対象エリア上でマウスボタンを離したらログを出力
+               logArea.addEventListener('mouseup', () => {
+                logArea.innerHTML = `マウスボタンを離した`
+               });
+               
+                //対象エリア上でマウスボタンを移動したら出力
+               logArea.addEventListener('mousemove', () => {
+                logArea.innerHTML = `マウス移動した`
                });
                
            
