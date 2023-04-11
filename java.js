@@ -261,13 +261,16 @@
            //},50);
             
                //ユーザーの操作に合わせてイベントを起こす
-               const button = document.querySelector('.button');
-               button.addEventListener('click', onClickButton);
+               //const button = document.querySelector('.button');
+               //button.addEventListener('click', onClickButton);
                
-               function onClickButton(){
-                console.log('クリックされました');
-               }
+               //function onClickButton(){
+                //console.log('クリックされました');
+               //}
                
+               document.querySelector('.button').addEventListener('click', () => {
+                alert('ボタンがクリックされました');
+               });
                
            
  
