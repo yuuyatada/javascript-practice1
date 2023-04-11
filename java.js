@@ -291,22 +291,37 @@
                //});
                
                /*動かすキャラ*/
-               const character = document.querySelector('.character');
+               //const character = document.querySelector('.character');
                //ページ上でマウスボタンを押したら移動開始
-               document.addEventListener('mousedown',() => {
+               //document.addEventListener('mousedown',() => {
                 //マウスの動きでキャラを動かす
-                document.addEventListener('mousemove', onMouseMove);
+                //document.addEventListener('mousemove', onMouseMove);
                 //ページ上でマウスボタンを離したらキャラの移動を終了
-                document.addEventListener('mouseup', () => {
-                 document.removeEventListener('mousemove',onMouseMove);
-                });
-               });
+                //document.addEventListener('mouseup', () => {
+                // document.removeEventListener('mousemove',onMouseMove);
+               // });
+               //});
                
                //マウスが動いた際の処理
-               function onMouseMove(event){
-                character.style.left = `${event.clientX - 100}px`;
-                character.style.top = `${event.clientY - 100}px`;
-               }
+               //function onMouseMove(event){
+              //  character.style.left = `${event.clientX - 100}px`;
+              //  character.style.top = `${event.clientY - 100}px`;
+              // }
+              
+              //テキストエリア
+              const textarea = document.querySelector('.textarea');
+              //入力中の文字数
+              const string_num = document .querySelector('.string_num');
+              
+              //テキストエリアに入力されるとonkeyupが実行される
+              textarea.addEventListener('keyup', onKeyUp);
+              
+              function onKeyUp(){
+               //入力されたテキスト
+               const inputText = textarea.value;
+               //文字数を反映
+               string_num.innerText = inputText.length;
+              }
            
  
 
