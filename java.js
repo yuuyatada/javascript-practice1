@@ -355,15 +355,37 @@
            //ページ表示に一度onMediaQueryChange()を実行する
           // onMediaQueryChange(mediaQueryList);
           
-          const boxElement = document.querySelector('#myBox');
+          //const boxElement = document.querySelector('#myBox');
           
-          boxElement.addEventListener('click',() => {
-           boxElement.innerHTML = 'クリックされました';
-          });
+         // boxElement.addEventListener('click',() => {
+           //boxElement.innerHTML = 'クリックされました';
+          //});
           
-          setTimeout(() => {
-           boxElement.dispatchEvent(new Event('click'));
-          },1000);
+          //setTimeout(() => {
+           //boxElement.dispatchEvent(new Event('click'));
+         // },1000);
+         
+         //マウスホイールの有効
+         let enableMouseWheel = true;
+         //チェックボックスをクリックしたときの処理
+         document
+         .querySelector('#mouseWheelToggle')
+         .addEventListener('click',(event) => {
+          //チェックボックスに値が入っていたら無効化する
+          enableMouseWheel = event.target.checked === false;
+         });
+         
+         //スクロール可能要素をマウスホイールしたときの反応
+         document
+          .querySelector('.scrollable-element')
+         .addEventListener('wheel',(event) => {
+          //ホイール有効時は処理を抜ける
+          if (enableMouseWheel === true){
+           return;
+          }
+          //ホイール無効時はevent.preventDefault()を実行
+          event.preventDefault();
+         });
  
 
 
