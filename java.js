@@ -309,20 +309,29 @@
               // }
               
               //テキストエリア
-              const textarea = document.querySelector('.textarea');
+              //const textarea = document.querySelector('.textarea');
               //入力中の文字数
-              const string_num = document .querySelector('.string_num');
+              //const string_num = document .querySelector('.string_num');
               
               //テキストエリアに入力されるとonkeyupが実行される
-              textarea.addEventListener('keyup', onKeyUp);
+              //textarea.addEventListener('keyup', onKeyUp);
               
-              function onKeyUp(){
+              //function onKeyUp(){
                //入力されたテキスト
-               const inputText = textarea.value;
+               //const inputText = textarea.value;
                //文字数を反映
-               string_num.innerText = inputText.length;
-              }
+               //string_num.innerText = inputText.length;
+              //}
+           //ウインドウ幅を表示
+           const widthLog = document.querySelector('#widthLog');
+           //ウインドウの高さを表示する要素
+           const heightLog = document.querySelector('#heightLog');
            
+           //ウインドウがリサイズされるたびに処理する
+           window.addEventListener('resize', () => {
+            widthLog.innerText = `${window.innerWidth}px`;
+            heightLog.innerText = `${window.innerHeight}px`;
+           });
  
 
 
