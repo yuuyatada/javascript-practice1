@@ -323,15 +323,37 @@
                //string_num.innerText = inputText.length;
               //}
            //ウインドウ幅を表示
-           const widthLog = document.querySelector('#widthLog');
+           //const widthLog = document.querySelector('#widthLog');
            //ウインドウの高さを表示する要素
-           const heightLog = document.querySelector('#heightLog');
+          // const heightLog = document.querySelector('#heightLog');
            
            //ウインドウがリサイズされるたびに処理する
-           window.addEventListener('resize', () => {
-            widthLog.innerText = `${window.innerWidth}px`;
-            heightLog.innerText = `${window.innerHeight}px`;
-           });
+           //window.addEventListener('resize', () => {
+            //widthLog.innerText = `${window.innerWidth}px`;
+           // heightLog.innerText = `${window.innerHeight}px`;
+           //});
+           
+           //ウインドウ幅でブレイクポイントを設ける
+           const rectAngle = document.querySelector('.rectangle');
+           
+           //メディアクエリ情報
+           const mediaQueryList = matchMedia('(min-width: 600px)');
+           
+           //メディアクエリが変更されたタイミングで処理
+           mediaQueryList.addListener(onMediaQueryChange);
+           
+           //メディアクエリが変更された場合の関数
+           function onMediaQueryChange(mediaQueryList){
+            if (mediaQueryList.matches === true){
+             rectAngle.classList.add('big-size');
+             console.log('ウインドウサイズが600pxを超えました');
+             }else{
+             rectAngle.classList.remove('big-size');
+             console.log('ウインドウサイズが600pxを下回りました');
+             }
+           }
+           //ページ表示に一度onMediaQueryChange()を実行する
+           onMediaQueryChange(mediaQueryList);
  
 
 
