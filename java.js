@@ -334,26 +334,36 @@
            //});
            
            //ウインドウ幅でブレイクポイントを設ける
-           const rectAngle = document.querySelector('.rectangle');
+           //const rectAngle = document.querySelector('.rectangle');
            
            //メディアクエリ情報
-           const mediaQueryList = matchMedia('(min-width: 600px)');
+          // const mediaQueryList = matchMedia('(min-width: 600px)');
            
            //メディアクエリが変更されたタイミングで処理
-           mediaQueryList.addListener(onMediaQueryChange);
+           //mediaQueryList.addListener(onMediaQueryChange);
            
            //メディアクエリが変更された場合の関数
-           function onMediaQueryChange(mediaQueryList){
-            if (mediaQueryList.matches === true){
-             rectAngle.classList.add('big-size');
-             console.log('ウインドウサイズが600pxを超えました');
-             }else{
-             rectAngle.classList.remove('big-size');
-             console.log('ウインドウサイズが600pxを下回りました');
-             }
-           }
+           //function onMediaQueryChange(mediaQueryList){
+           // if (mediaQueryList.matches === true){
+            // rectAngle.classList.add('big-size');
+             //console.log('ウインドウサイズが600pxを超えました');
+             //}else{
+            // rectAngle.classList.remove('big-size');
+             //console.log('ウインドウサイズが600pxを下回りました');
+            // }
+          // }
            //ページ表示に一度onMediaQueryChange()を実行する
-           onMediaQueryChange(mediaQueryList);
+          // onMediaQueryChange(mediaQueryList);
+          
+          const boxElement = document.querySelector('#myBox');
+          
+          boxElement.addEventListener('click',() => {
+           boxElement.innerHTML = 'クリックされました';
+          });
+          
+          setTimeout(() => {
+           boxElement.dispatchEvent(new Event('click'));
+          },1000);
  
 
 
