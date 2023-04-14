@@ -366,26 +366,39 @@
          // },1000);
          
          //マウスホイールの有効
-         let enableMouseWheel = true;
+         //let enableMouseWheel = true;
          //チェックボックスをクリックしたときの処理
-         document
-         .querySelector('#mouseWheelToggle')
-         .addEventListener('click',(event) => {
+         //document
+        /// .querySelector('#mouseWheelToggle')
+         //.addEventListener('click',(event) => {
           //チェックボックスに値が入っていたら無効化する
-          enableMouseWheel = event.target.checked === false;
-         });
+          //enableMouseWheel = event.target.checked === false;
+        // });
          
          //スクロール可能要素をマウスホイールしたときの反応
-         document
-          .querySelector('.scrollable-element')
-         .addEventListener('wheel',(event) => {
+         //document
+          //.querySelector('.scrollable-element')
+        // .addEventListener('wheel',(event) => {
           //ホイール有効時は処理を抜ける
-          if (enableMouseWheel === true){
-           return;
-          }
+         // if (enableMouseWheel === true){
+          // return;
+        //  }
           //ホイール無効時はevent.preventDefault()を実行
-          event.preventDefault();
-         });
+          //event.preventDefault();
+        // });
+        
+        const box = document.querySelector('.box');
+        box.addEventListener('dragenter',() => {
+         console.log('dragenterイベント');
+        });
+        
+        box.addEventListener('dragover',() => {
+         console.log('dragoverイベント');
+        });
+        
+         box.addEventListener('dragleave',() => {
+         console.log('dragleaveイベント');
+        });
  
 
 
