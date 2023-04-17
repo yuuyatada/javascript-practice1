@@ -387,18 +387,22 @@
           //event.preventDefault();
         // });
         
-        const box = document.querySelector('.box');
-        box.addEventListener('dragenter',() => {
-         console.log('dragenterイベント');
-        });
+        //ドラッグ&ドロップ
+        //const box = document.querySelector('.box');
+       // box.addEventListener('dragenter',() => {
+        // console.log('dragenterイベント');
+       // });
         
-        box.addEventListener('dragover',() => {
-         console.log('dragoverイベント');
-        });
+       // box.addEventListener('dragover',() => {
+        // console.log('dragoverイベント');
+        //});
         
-         box.addEventListener('dragleave',() => {
-         console.log('dragleaveイベント');
-        });
+        // box.addEventListener('dragleave',() => {
+        // console.log('dragleaveイベント');
+        //});
+        
+        const logElement = document.querySelector('#log');
+        logElement.innerHTML = 'こんにちは';
  
 
 
