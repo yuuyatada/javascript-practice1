@@ -401,8 +401,11 @@
         // console.log('dragleaveイベント');
         //});
         
-        const logElement = document.querySelector('#log');
-        logElement.innerHTML = 'こんにちは';
+        //const logElement = document.querySelector('#log');
+        //logElement.innerHTML = 'こんにちは';
+        
+        //foo要素
+        const element = document.getElementById('foo');
  
 
 
