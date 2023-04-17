@@ -416,13 +416,21 @@
          //});
        // });
        
-       const themeChangeButton = 
-       document.querySelector('.theme-change-button');
+       //const themeChangeButton = 
+       //document.querySelector('.theme-change-button');
        //テーマ変更ボタンをクリックしたときの処理
-       themeChangeButton.addEventListener('click', () => {
+       //themeChangeButton.addEventListener('click', () => {
         //body要素のクラスのtheme-darkを切り替える
-        document.body.classList.toggle('theme-dark');
-       });
+        //document.body.classList.toggle('theme-dark');
+       //});
+       
+       const container = document.querySelector('.container');
+       const myBox = document.querySelector('#myBox');
+       
+       //3秒後に#mybox要素を.container要素の末尾に追加する
+       setTimeout(() => {
+        container.appendChild(myBox);
+       },3000);
  
 
 
