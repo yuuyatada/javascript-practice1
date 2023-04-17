@@ -408,13 +408,21 @@
         //const element = document.getElementById('foo');
         
         //各.box要素に対してループ
-        document.querySelectorAll('.box').forEach((targetBox) => {
+        //document.querySelectorAll('.box').forEach((targetBox) => {
          //.box要素をクリックしたときの処理
-         targetBox.addEventListener('click',() => {
+         //targetBox.addEventListener('click',() => {
           //クリックされた.box要素のテキストを表示
-          alert(`${targetBox.textContent}がクリックされました`);
-         });
-        });
+         // alert(`${targetBox.textContent}がクリックされました`);
+         //});
+       // });
+       
+       const themeChangeButton = 
+       document.querySelector('.theme-change-button');
+       //テーマ変更ボタンをクリックしたときの処理
+       themeChangeButton.addEventListener('click', () => {
+        //body要素のクラスのtheme-darkを切り替える
+        document.body.classList.toggle('theme-dark');
+       });
  
 
 

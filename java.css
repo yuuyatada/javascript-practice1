@@ -72,3 +72,12 @@ background-image:linear-gradient(-135deg, red, #ff00a2);
     height:150px;
     overflow-y: scroll;
 }*/
+
+body{
+    background-color: #f9f9f9;
+}
+
+body.theme-dark{
+    background-color:#1e1e1e;
+    color:#fff;
+}
