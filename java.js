@@ -445,10 +445,12 @@
       
       //3秒後に処理を行う
       setTimeout(() => {
-       const parentElement = document.querySelector('#parent');
+       //const parentElement = document.querySelector('#parent');
        const childElenment = document.querySelector('#child');
        //#child要素を取り除く
-       parentElement.removeChild(childElenment);
+       //parentElement.removeChild(childElenment);
+       //child要素を取り除く
+       childElenment.remove();
       },3000);
  
 
