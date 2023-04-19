@@ -444,14 +444,20 @@
       // },3000);
       
       //3秒後に処理を行う
-      setTimeout(() => {
+      //setTimeout(() => {
        //const parentElement = document.querySelector('#parent');
-       const childElenment = document.querySelector('#child');
+       //const childElenment = document.querySelector('#child');
        //#child要素を取り除く
        //parentElement.removeChild(childElenment);
        //child要素を取り除く
-       childElenment.remove();
-      },3000);
+       //childElenment.remove();
+     // },3000);
+     
+     setTimeout(() => {
+      //#myBox要素を子ノードも含めて複製
+      const clonedBox = document.querySelector('#myBox').cloneNode(true);
+      document.querySelector('.container').appendChild(clonedBox);
+     },3000);
  
 
 
