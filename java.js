@@ -453,12 +453,26 @@
        //childElenment.remove();
      // },3000);
      
-     setTimeout(() => {
+     //setTimeout(() => {
       //#myBox要素を子ノードも含めて複製
-      const clonedBox = document.querySelector('#myBox').cloneNode(true);
-      document.querySelector('.container').appendChild(clonedBox);
-     },3000);
- 
+     // const clonedBox = document.querySelector('#myBox').cloneNode(true);
+     // document.querySelector('.container').appendChild(clonedBox);
+    // },3000);
+    
+    setTimeout(() => {
+     //コンテナ
+     const container = document.querySelector('.container');
+     //旧ボックス要素
+     const oldBox = document.querySelector('.old-box');
+     //新ボックス要素。div要素を作り「新ボックス」というテキストノードを追加する
+     const newBox = document.createElement('div');
+     newBox.textContent = '新ボックス';
+     
+     //new-box,boxというcssクラスを追加
+     newBox.classList.add('new-box','box');
+     //新旧ボックスを入れ替える
+     container.replaceChild(newBox,oldBox);
+    },3000);
 
 
 
