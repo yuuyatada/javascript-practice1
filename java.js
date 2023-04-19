@@ -424,12 +424,23 @@
         //document.body.classList.toggle('theme-dark');
        //});
        
-       const container = document.querySelector('.container');
-       const myBox = document.querySelector('#myBox');
+       //const container = document.querySelector('.container');
+       //const myBox = document.querySelector('#myBox');
        
        //3秒後に#mybox要素を.container要素の末尾に追加する
+       //setTimeout(() => {
+       //container.appendChild(myBox);
+       //},3000);
+       
+       const container = document.querySelector('.container');
+       //挿入する.new-box要素
+       const newBox = `<div class="new-box box">.new-box要素</div>`;
+       
        setTimeout(() => {
-        container.appendChild(myBox);
+        //container要素内先頭に.new-box要素を追加する
+        container.insertAdjacentHTML('afterbegin',newBox);
+        //.container要素の直後に.new-box要素を追加する
+        container.insertAdjacentHTML('afterend',newBox);
        },3000);
  
 
