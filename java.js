@@ -487,10 +487,16 @@
     // oldBox.replaceWith(newBox);
    // },3000);
    
-   const weatherInformation =
-   document.querySelector('#weather-information');
+   //const weatherInformation =
+   //document.querySelector('#weather-information');
    //以下の文字列を出力
    //曇り（２３ど）
-   console.log(weatherInformation.textContent);
+   //console.log(weatherInformation.textContent);
+   
+   const weatherElement = document.querySelector('#weather');
+   //3秒間にweatherの中身を書き換える
+   setTimeout(() => {
+    weatherElement.textContent = '気温24°の予想です'
+   },3000);
 
 
