@@ -82,3 +82,7 @@ body.theme-dark{
     background-color:#1e1e1e;
     color:#fff;
 }*/
+
+#weather strong{
+    color:#d03939;
+}

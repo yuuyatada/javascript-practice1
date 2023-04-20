@@ -493,10 +493,17 @@
    //曇り（２３ど）
    //console.log(weatherInformation.textContent);
    
+   //const weatherElement = document.querySelector('#weather');
+   //3秒間にweatherの中身を書き換える
+   //setTimeout(() => {
+   // weatherElement.textContent = '気温24°の予想です'
+  // },3000);
+  
+  
    const weatherElement = document.querySelector('#weather');
    //3秒間にweatherの中身を書き換える
    setTimeout(() => {
-    weatherElement.textContent = '気温24°の予想です'
-   },3000);
+    weatherElement.innerHTML = '気温は<strong>-3°</strong>の予想です';
+    },3000);
 
 
