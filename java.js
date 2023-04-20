@@ -459,9 +459,22 @@
      // document.querySelector('.container').appendChild(clonedBox);
     // },3000);
     
-    setTimeout(() => {
+    //setTimeout(() => {
      //コンテナ
-     const container = document.querySelector('.container');
+     //const container = document.querySelector('.container');
+     //旧ボックス要素
+     //const oldBox = document.querySelector('.old-box');
+     //新ボックス要素。div要素を作り「新ボックス」というテキストノードを追加する
+    // const newBox = document.createElement('div');
+    // newBox.textContent = '新ボックス';
+     
+     //new-box,boxというcssクラスを追加
+     //newBox.classList.add('new-box','box');
+     //新旧ボックスを入れ替える
+    // container.replaceChild(newBox,oldBox);
+  //  },3000);
+
+ setTimeout(() => {
      //旧ボックス要素
      const oldBox = document.querySelector('.old-box');
      //新ボックス要素。div要素を作り「新ボックス」というテキストノードを追加する
@@ -470,9 +483,8 @@
      
      //new-box,boxというcssクラスを追加
      newBox.classList.add('new-box','box');
-     //新旧ボックスを入れ替える
-     container.replaceChild(newBox,oldBox);
+     //新旧ボックスの入れ替え
+     oldBox.replaceWith(newBox);
     },3000);
-
 
 
