@@ -530,18 +530,28 @@
   //結果：今日の天気は（改行）曇りです
   
   //textareaの参照
-  const element = document.querySelector('#myText');
+  //const element = document.querySelector('#myText');
   //イベントを登録
-  element.addEventListener('input',handleChange);
+  //element.addEventListener('input',handleChange);
   
-  function handleChange(event){
+  //function handleChange(event){
    //値を取得
-   const value = event.target.value;
+   //const value = event.target.value;
    //改行コードを改行タグに変換
-   const htmlStr = value.split('/n').join('<br />');
-   document.querySelector('.log').innerHTML = htmlStr
-  }
+  // const htmlStr = value.split('/n').join('<br />');
+  // document.querySelector('.log').innerHTML = htmlStr
+ // }
+ 
+ const cbA = document.querySelector('#cbA');
+ const checkedA = cbA.checked;
+ 
+ const cbB = document.querySelector('#cbB');
+ const checkedB = cbB.checked;
    
-   
-
+ const cbC = document.querySelector('#cbC');
+ const checkedC = cbC.checked;
+ 
+ console.log('checkedAの値',checkedA); //false
+ console.log('checkedBの値',checkedB); //true
+ console.log('checkedCの値',checkedC); //false
 
