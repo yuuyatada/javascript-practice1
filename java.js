@@ -500,10 +500,16 @@
   // },3000);
   
   
-   const weatherElement = document.querySelector('#weather');
+   //const weatherElement = document.querySelector('#weather');
    //3秒間にweatherの中身を書き換える
-   setTimeout(() => {
-    weatherElement.innerHTML = '気温は<strong>-3°</strong>の予想です';
-    },3000);
+  // setTimeout(() => {
+    //weatherElement.innerHTML = '気温は<strong>-3°</strong>の予想です';
+   // },3000);
+   
+   const element = document.querySelector('#myText');
+   const value = element.value;
+   console.log(value);
+   
+   
 
 
