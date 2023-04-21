@@ -511,16 +511,23 @@
   // console.log(value);
   
   //input要素の参照
-  const element = document.querySelector('#myText');
+  //const element = document.querySelector('#myText');
   //イベントを登録
-  element.addEventListener('input',handleChange);
+ // element.addEventListener('input',handleChange);
   
-  function handleChange(event){
+ // function handleChange(event){
    //値を取得する
-   const value = event.target.value;
+  // const value = event.target.value;
    //画面に反映
-   document.querySelector('.log').innerHTML = value;
-  }
+  // document.querySelector('.log').innerHTML = value;
+  //}
+  
+  //textareaの参照
+  const element = document.querySelector('#myText');
+  //値
+  const value = element.value;
+  console.log(value);
+  //結果：今日の天気は（改行）曇りです
    
    
 
