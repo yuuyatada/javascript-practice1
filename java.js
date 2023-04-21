@@ -506,9 +506,21 @@
     //weatherElement.innerHTML = '気温は<strong>-3°</strong>の予想です';
    // },3000);
    
-   const element = document.querySelector('#myText');
-   const value = element.value;
-   console.log(value);
+  // const element = document.querySelector('#myText');
+  // const value = element.value;
+  // console.log(value);
+  
+  //input要素の参照
+  const element = document.querySelector('#myText');
+  //イベントを登録
+  element.addEventListener('input',handleChange);
+  
+  function handleChange(event){
+   //値を取得する
+   const value = event.target.value;
+   //画面に反映
+   document.querySelector('.log').innerHTML = value;
+  }
    
    
 
