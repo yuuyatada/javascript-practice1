@@ -556,13 +556,28 @@
  //console.log('checkedCの値',checkedC); //false
  
  //チェックボックス
- const cb = document.querySelector('#cbA');
- cb.addEventListener('change',(event) => {
+ //const cb = document.querySelector('#cbA');
+ //cb.addEventListener('change',(event) => {
   //選択状態を確認する
-  const value = event.target.checked;
+ // const value = event.target.checked;
   
   //画面に表示する
-  const log = `チェックボックスAは${value}になりました`;
-  document.querySelector('.log').innerHTML = log;
+ // const log = `チェックボックスAは${value}になりました`;
+ // document.querySelector('.log').innerHTML = log;
+ //});
+ 
+ //input要素を参照
+ const element = document.querySelector('#myFile');
+ 
+ //ファイル選択ダイアログが選択されたら
+ element.addEventListener('change', (event) => {
+  const target = event.target;
+  //選択されたファイルを参照
+  const files = target.files;
+  //配列になってるので、０ばんめのファイルを参照
+  const file = files[0];
+  
+  //ユーザーが選択したファイル名を表示
+  alert(`${file.name}が選択されました`);
  });
 
