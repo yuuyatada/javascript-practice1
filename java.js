@@ -542,16 +542,27 @@
   // document.querySelector('.log').innerHTML = htmlStr
  // }
  
- const cbA = document.querySelector('#cbA');
- const checkedA = cbA.checked;
+ //const cbA = document.querySelector('#cbA');
+ //const checkedA = cbA.checked;
  
- const cbB = document.querySelector('#cbB');
- const checkedB = cbB.checked;
+ //const cbB = document.querySelector('#cbB');
+ // checkedB = cbB.checked;
    
- const cbC = document.querySelector('#cbC');
- const checkedC = cbC.checked;
+ //const cbC = document.querySelector('#cbC');
+ //const checkedC = cbC.checked;
  
- console.log('checkedAの値',checkedA); //false
- console.log('checkedBの値',checkedB); //true
- console.log('checkedCの値',checkedC); //false
+ //console.log('checkedAの値',checkedA); //false
+ //console.log('checkedBの値',checkedB); //true
+ //console.log('checkedCの値',checkedC); //false
+ 
+ //チェックボックス
+ const cb = document.querySelector('#cbA');
+ cb.addEventListener('change',(event) => {
+  //選択状態を確認する
+  const value = event.target.checked;
+  
+  //画面に表示する
+  const log = `チェックボックスAは${value}になりました`;
+  document.querySelector('.log').innerHTML = log;
+ });
 
