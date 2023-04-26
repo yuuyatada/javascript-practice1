@@ -590,9 +590,20 @@
 //document.querySelector('.log').innerHTML = log;
 
 //input要素の参照
-const element = document.querySelector('#myRnage');
+//const element = document.querySelector('#myRnage');
 //現在の値を取得
-const value = element.value;
+//const value = element.value;
 //画面に表示
-document.querySelector('.log').innerHTML = `現在の値は${value}です`;
+//document.querySelector('.log').innerHTML = `現在の値は${value}です`;
+
+//input要素の参照
+const element = document.querySelector('#myRnage');
+//変更イベントを監視
+element.addEventListener('input',handleChange);
+function handleChange(event){
+ //現在の値を取得
+ const value =event.target.value;
+ //画面に表示
+ document.querySelector('.log').innerHTML = `現在の値は${value}です`;
+}
 
