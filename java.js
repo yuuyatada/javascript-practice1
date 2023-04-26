@@ -582,10 +582,17 @@
 // });
 
 //select要素の参照
-const element = document.querySelector('#mySelect');
+//const element = document.querySelector('#mySelect');
 //値を取得
-const value = element.value;
+//const value = element.value;
 //整形して画面に表示
-const log = `表示されているのは${value}です`;
-document.querySelector('.log').innerHTML = log;
+//const log = `表示されているのは${value}です`;
+//document.querySelector('.log').innerHTML = log;
+
+//input要素の参照
+const element = document.querySelector('#myRnage');
+//現在の値を取得
+const value = element.value;
+//画面に表示
+document.querySelector('.log').innerHTML = `現在の値は${value}です`;
 
