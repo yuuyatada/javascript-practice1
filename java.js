@@ -607,9 +607,9 @@
  //document.querySelector('.log').innerHTML = `現在の値は${value}です`;
 //}
 
-const element = document.querySelector('#myColor');
-const value = element.value;
-console.log(value);
+//const element = document.querySelector('#myColor');
+//const value = element.value;
+//console.log(value);
 
 
 
