@@ -625,8 +625,22 @@
 // const mySvg = document.querySelector('#mySvg');
 // mySvg.appendChild(myCircle);
 
-const circle = document.querySelector('#myCircle');
-circle.addEventListener('click', (event) => {
- alert('クリックされました')
-});
+//const circle = document.querySelector('#myCircle');
+//circle.addEventListener('click', (event) => {
+// alert('クリックされました')
+//});
+
+const myCircle = document.querySelector('#myCircle');
+let time = 0;
+animate();
+function animate(){
+ //時間で変化
+ time += 0.1;
+ //色を変化
+ myCircle.style.fill = `hsl(0,100%,&{time}%)`;
+ //目標値に達するまで続ける
+ if(time<50){
+  requestAnimationFrame(animate);
+ }
+}
 
