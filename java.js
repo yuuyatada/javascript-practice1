@@ -644,7 +644,14 @@
 // }
 //}
 
+//const canvas = document.querySelector('#my-canvas');
+//const context = canvas.getContext('2d');
+//context.fillRect(0,0,100,100);
+
 const canvas = document.querySelector('#my-canvas');
 const context = canvas.getContext('2d');
+context.fillStyle = 'red';
 context.fillRect(0,0,100,100);
+
+
 
