@@ -630,17 +630,21 @@
 // alert('クリックされました')
 //});
 
-const myCircle = document.querySelector('#myCircle');
-let time = 0;
-animate();
-function animate(){
+//const myCircle = document.querySelector('#myCircle');
+//let time = 0;
+//animate();
+//function animate(){
  //時間で変化
- time += 0.1;
+// time += 0.1;
  //色を変化
- myCircle.style.fill = `hsl(0,100%,&{time}%)`;
+// myCircle.style.fill = `hsl(0,100%,&{time}%)`;
  //目標値に達するまで続ける
- if(time<50){
-  requestAnimationFrame(animate);
- }
-}
+ //if(time<50){
+//  requestAnimationFrame(animate);
+// }
+//}
+
+const canvas = document.querySelector('#my-canvas');
+const context = canvas.getContext('2d');
+context.fillRect(0,0,100,100);
 
