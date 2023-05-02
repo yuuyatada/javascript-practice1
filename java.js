@@ -660,14 +660,14 @@
 //context.fillRect(0,0,100,100);
 
 
-const btnSave =document.querySelector('btnSave');
-const btnRead =document.querySelector('btnRead');
-btnSave.addEventListener('click', () => {
- document.cookie = 'id=1';
- document.cookie = 'age=30';
- document.cookie = `name=${encodeURIComponent('山田')}`;
-});
-btnRead.addEventListener('click',() =>{
- alert(document.cookie);
-})
+//const btnSave =document.querySelector('btnSave');
+//const btnRead =document.querySelector('btnRead');
+//btnSave.addEventListener('click', () => {
+// document.cookie = 'id=1';
+// document.cookie = 'age=30';
+// document.cookie = `name=${encodeURIComponent('山田')}`;
+//});
+//btnRead.addEventListener('click',() =>{
+// alert(document.cookie);
+//})
 
