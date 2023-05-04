@@ -2,7 +2,7 @@
 //const secondElement = document.querySelector('.second');
 
 //15秒後をゴールにする//
-const goalTime = new Date().getTime() + 15 * 1000;
+//const goalTime = new Date().getTime() + 15 * 1000;
 
 //update();
 
