@@ -7,7 +7,19 @@
     <script src="java.js" defer></script>
     <title>Javascript</title>
   </head>
+  
+  <script>
+  window.onload = function () {
+    // おみくじ
+    // この順番が良い順番らしい（吉と中吉が逆になることも）
+    const list = ["大吉","吉","中吉","小吉","末吉","凶","大凶"];
 
+    document.getElementById("button").onclick = function () {
+      var random = Math.floor(Math.random() * list.length);
+      document.getElementById("result").textContent = list[random];
+    }
+  }
+</script>
   <body>
  <!--ストップウォッチ
     <div class="timer">
@@ -264,6 +276,17 @@
   </div>
 </div>-->
     
+  
+
+
+  <div class="wrapper">
+    <p>おみくじ<br>ボタンをクリックしてください。</p>
+    <div class="wrapper-button">
+      <button id="button" class="button">おみくじを引く</button>
+    </div>
+    <p id="result"></p>
+  </div>
+
     
   </body>
 </html>
