@@ -94,9 +94,9 @@ body.theme-dark{
 .rect.state-show{
     width: 400px;
 }*/
-
+/*
 @charset "UTF-8";
-/*全体*/
+/*全体
 .wrapper{
   max-width: 350px;
   margin: 0 auto;
@@ -106,12 +106,12 @@ body.theme-dark{
   box-sizing: border-box;
   text-align: center;
 }
-/*ヘッダー*/
+/*ヘッダー
 #header {
   font-size: 24px;
   padding: 1rem;
 }
-/*テキスト*/
+/*テキスト
 input{
   box-sizing: border-box;
   width: 75%;
@@ -120,7 +120,7 @@ input{
   text-align: right;
   padding: 0 0.75rem;
 }
-/*ボタン関係*/
+/*ボタン関係
 button{
   font-size: 18px;
   width: 25%;
@@ -131,4 +131,4 @@ button{
 }
 button:hover{
   background-color: #ddd;
-}
+}*/
